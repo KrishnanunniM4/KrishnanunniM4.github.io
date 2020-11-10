@@ -11,7 +11,7 @@
     <div class="container mt-4">
         <h1 class="display-4 text-center"><i class="fas fa-apple-alt"></i>My<span class="text-primary">Fruit</span>List</h1><br>
         <!--Form-->
-        <form onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
+        <form id="fruit-form" onsubmit="event.preventDefault(); onFormSubmit();" autocomplete="off">
             <div class="form-group">
                 <label>Fruit</label>
                 <input type="text" name="fruitName" id="fruitName" class="form-control">
@@ -27,6 +27,9 @@
             <div>
                 <input type="submit" value="Add Fruit" class="btn btn-primary btn-block">
             </div>
+            <div>
+                <input type="text" id="filterInput" onkeyup="filterItems()" placeholder="Search Fruits..." class="form-control mt-4">
+            </div>
         </form>
         <!--List-->
         <table class="table table-striped mt-4" id="fruit-list">
@@ -39,7 +42,7 @@
                     <th>Delete</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tableBody">
 
             </tbody>
         </table>
