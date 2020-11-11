@@ -67,12 +67,7 @@
     }
     function showAlert(message, className)
     {
-        const div = document.createElement('div');
-        div.className = `alert alert-${className}`;
-        div.appendChild(document.createTextNode(message));
-        let container = document.querySelector('.container');
-        let form = document.querySelector('#fruit-form');
-        container.insertBefore(div, form);
+        $('br').after(`<div class="alert alert-${className}">${message}</div>`);
         // Vanish in 3 secs
         setTimeout(() => $('.alert').remove(), 3000);
     }
