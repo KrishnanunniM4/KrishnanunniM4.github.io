@@ -2,14 +2,49 @@
 {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
-    /*background: linear-gradient(120deg, #5e5e5e, #5e5e5e);*/
+    /*background: #252839;*/
+    background: linear-gradient(120deg, #3f3f3f, #3f3f3f);
 }
-h1
+header
 {
     display: flex;
     justify-content: center;
-    text-transform: uppercase;
-    letter-spacing: 2px;
+    align-items: center;
+}
+h2
+{
+    position: relative;
+    font-size: 50px;
+    color: #5e5e5e;
+    -webkit-text-stroke: 0.01px #5e5e5e;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+}
+h2::before
+{
+    content: attr(data-text);
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 0;
+    height: 100%;
+    color: #f33b3b;
+    -webkit-text-stroke: 0px #383d52;
+    border-right: 2px solid #f33b3b;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+    0%,10%,100%
+    {
+        width: 0;
+    }
+    70%,90%
+    {
+        width: 100%;
+    }
 }
 #btnNew
 {
@@ -23,7 +58,6 @@ h1
     margin-right: 10px;
     outline: none;
     font-size: 20px;
-    letter-spacing: 2px;
     border-radius: 40px;
     cursor: pointer;
     background: linear-gradient(90deg, #755bea, #ff72c0);
@@ -39,11 +73,11 @@ h1
 
 .gradient1
 {
-    background: linear-gradient(120deg, #43e97b, #38f9d7, #43e97b);
+    background: linear-gradient(90deg, #43e97b, #38f9d7, #43e97b);
 }
 .gradient2
 {
-    background: linear-gradient(120deg, #a18cd1, #fbc2eb, #a18cd1);
+    background: linear-gradient(110deg, #a18cd1, #fbc2eb, #a18cd1);
 }
 .gradient3
 {
@@ -51,15 +85,19 @@ background: linear-gradient(120deg, #fa709a, #fee140, #fa709a);
 }
 .gradient4
 {
-    background: linear-gradient(120deg, #4481eb, #04befe, #4481eb);
+    background: linear-gradient(180deg, #4481eb, #04befe, #4481eb);
 }
 .gradient5
 {
-background: linear-gradient(120deg, #ffe29f, #ffa99f, #ffe29f);
+background: linear-gradient(160deg, #ffe29f, #ffa99f, #ffe29f);
 }
 .gradient6
 {
-    background: linear-gradient(120deg, #fdfc47, #24fe41, #fdfc47);
+    background: linear-gradient(150deg, #fdfc47, #24fe41, #fdfc47);
+}
+.gradient7
+{
+    background: linear-gradient(200deg, #d43535, #5a53be, #d43535);
 }
 .sticky
 {
@@ -68,7 +106,7 @@ background: linear-gradient(120deg, #ffe29f, #ffa99f, #ffe29f);
     border-radius: 10px;
     margin: 10px;
     padding: 5px;
-    box-shadow: 6px 6px 3px gray;
+    float: left;
     cursor: all-scroll;
 }
 .sticky textarea

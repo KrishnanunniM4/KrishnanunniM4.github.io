@@ -10,12 +10,13 @@ $(document).ready(function(){
         id++;
         $('#container').append(newNote);
 
-        var left = $(this).position().left;
+        /*var left = $(this).position().left;
         var top = $(this).position().top + 50;
         $('.sticky').each(function(){
             $(this).css({left:left + 'px', top:top + 'px', position: 'absolute'});
             left += 235;
-        });
+        });*/
+        
     });
 
     $('#container').on('click', '.sticky', function(){
