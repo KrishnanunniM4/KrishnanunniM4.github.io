@@ -106,7 +106,6 @@ background: linear-gradient(160deg, #ffe29f, #ffa99f, #ffe29f);
     border-radius: 10px;
     margin: 10px;
     padding: 5px;
-    float: left;
     cursor: all-scroll;
 }
 .sticky textarea
