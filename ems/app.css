@@ -1,0 +1,490 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+.navbar {
+  position: fixed;
+  background-color: transparent;
+  width: 100%;
+  padding: 30px 0;
+  top: 0;
+  z-index: 999;
+  transition: 0.3s linear;
+}
+.inner-width {
+  max-width: 1500px;
+  margin: auto;
+  padding: 0 40px;
+}
+.navbar .inner-width {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 44px;
+  height: 32px;
+  background-image: url("/ems/webpage/white-logo.png");
+  background-size: contain;
+}
+.menu-toggler {
+  background: none;
+  width: 30px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  z-index: 999;
+  display: none;
+}
+.menu-toggler span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  margin: 6px 0;
+  position: relative;
+  transition: 0.3s linear;
+}
+.navbar-menu a {
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: 0.2s linear;
+}
+.navbar-menu a:hover {
+  color: #48dbfb !important;
+}
+.sticky {
+  background-color: #fff;
+  padding: 18px 0;
+  z-index: 1000;
+}
+.sticky .logo {
+  background-image: url("/ems/webpage/black-logo.png");
+}
+.sticky .navbar-menu a {
+  color: #111;
+}
+.sticky .menu-toggler span {
+  background-color: #111;
+}
+#home {
+  height: 100vh;
+  min-height: 500px;
+}
+#home .inner-width {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  text-align: center;
+}
+#home .content {
+  width: 100%;
+  color: white;
+  z-index: 999;
+}
+#home .content h2 {
+  font-size: 60px;
+  margin-bottom: 20px;
+}
+#home .content h1 {
+  font-size: 60px;
+  margin-bottom: 60px;
+}
+#home .content h1::after {
+  content: "Techfest";
+  animation: textanim 10s linear infinite;
+}
+@keyframes textanim {
+  25% {
+    content: "4 Days";
+  }
+  50% {
+    content: "60+ Events";
+  }
+  75% {
+    content: "1200+ Collages";
+  }
+}
+.sm a {
+  color: white;
+  font-size: 22px;
+  margin: 0 10px;
+  transition: 0.2s linear;
+}
+.sm a:hover {
+  color: #48dbfb;
+}
+#home .buttons {
+  margin-top: 60px;
+}
+#home .buttons a {
+  display: inline-block;
+  margin: 15px 30px;
+  color: #48dbfb;
+  font-size: 15px;
+  font-weight: 500;
+  width: 180px;
+  border: 1px solid #48dbfb;
+  padding: 14px 0;
+  border-radius: 6px;
+  transition: 0.2s linear;
+}
+#home .buttons a:hover {
+  background-color: #48dbfb;
+  color: #fff;
+}
+section video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.about {
+  background: #162c3b;
+  position: relative;
+  width: 100%;
+  display: flex;
+}
+.about .contentBx {
+  background: #162c3b;
+  padding: 100px;
+  width: 50%;
+}
+.heading {
+  color: #fff;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.text {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+.about .imgBx {
+  background: url("/ems/webpage/drone.jpg");
+  width: 50%;
+  background-size: cover;
+  background-position: center;
+}
+.events {
+  background: #12222d;
+  padding: 100px;
+}
+.events .container {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.events .container .card {
+  position: relative;
+  background: #fff;
+  height: 250px;
+  display: flex;
+  width: 30%;
+  margin: 50px 0;
+}
+.events .container .card .cardBx {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+.events .container .card:hover .cardBx {
+  width: 150px;
+  height: 150px;
+  left: -50px;
+  top: calc(50% - 75px);
+  transition: 0.5s ease-in-out;
+}
+.events .container .card .cardContent {
+  position: absolute;
+  right: 0;
+  width: calc(100% - 85px);
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.events .container .card .cardContent h3 {
+  margin-bottom: 5px;
+  font-size: 24px;
+}
+.events .container .card .cardContent a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 5px 10px;
+  background: #333;
+  text-decoration: none;
+  color: #fff;
+}
+.middle {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
+}
+.counting-sec {
+  padding: 40px 0;
+  width: 100%;
+  background: linear-gradient(90deg, #3c6382, #82ccdd);
+}
+.inner-width {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+}
+.col {
+  flex: 1;
+  text-align: center;
+  padding: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+.col i {
+  font-size: 40px;
+  color: #333;
+}
+.num {
+  font-size: 40px;
+  margin: 20px 0;
+}
+.sponsors {
+  background: #162c3b;
+  padding: 80px;
+  text-align: center;
+}
+.sponsors .imgBx {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.sponsors .imgBx img {
+  max-width: 200px;
+  margin: 60px;
+  opacity: 0.25;
+  cursor: pointer;
+}
+.sponsors .imgBx img:hover {
+  opacity: 1;
+}
+.gallery {
+  position: relative;
+  padding: 80px;
+  background: #3f8ffc;
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 200px;
+}
+.gallery .swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, #0006);
+}
+.teamBody {
+  position: relative;
+  padding: 100px;
+  background: #161623;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.teamContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+.teamContainer .teamCard {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  margin: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+.teamContainer .teamCard .teamContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.teamContainer .teamCard:hover .teamContent {
+  opacity: 1;
+  transform: translateY(-20px);
+}
+.teamContainer .teamCard .teamContent .teamImgBx {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 10px solid rgba(0, 0, 0, 0.25);
+}
+.teamContainer .teamCard .teamContent .teamImgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.teamContainer .teamCard .teamContent .teamContentBx h3 {
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-size: 18px;
+  text-align: center;
+  margin: 20px 0 10px;
+  line-height: 1.1em;
+}
+.teamContainer .teamCard .teamContent .teamContentBx h3 span {
+  font-size: 14px;
+  font-weight: 300;
+  text-transform: initial;
+}
+.teamContainer .teamCard .sci {
+  position: absolute;
+  bottom: 50px;
+  display: flex;
+}
+.teamContainer .teamCard .sci li {
+  list-style: none;
+  margin: 0 10px;
+  transform: translateY(40px);
+  transition: 0.5s;
+  opacity: 0;
+  transition-delay: calc(0.07s * var(--i));
+}
+.teamContainer .teamCard:hover .sci li {
+  transform: translateY(0px);
+  opacity: 1;
+}
+.teamContainer .teamCard .sci li a {
+  color: #fff;
+  font-size: 24px;
+}
+.contactPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #162c3b;
+}
+.contact-page {
+  width: 100%;
+  max-width: 1400px;
+  padding: 50px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+h4 {
+  width: 100%;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+  font-size: 60px;
+  color: #fff;
+}
+.contact-info,
+.contact-form {
+  flex: 1;
+}
+.item {
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: #fff;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  background-color: #3494db;
+  text-align: center;
+  color: #fff;
+  border-radius: 50%;
+  margin-right: 16px;
+}
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.textb {
+  width: calc(50% - 10px);
+  height: 50px;
+  padding: 12px;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  margin-bottom: 20px;
+}
+textarea {
+  width: 100%;
+  min-height: 200px;
+  max-height: 400px;
+  resize: vertical;
+  padding: 12px;
+  background-color: #222;
+  border: none;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.btn {
+  width: 120px;
+  height: 40px;
+  margin-left: auto;
+  background-color: #48dbfb;
+  border: none;
+  color: #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 2px solid #48dbfb;
+  transition: 0.3s linear;
+}
